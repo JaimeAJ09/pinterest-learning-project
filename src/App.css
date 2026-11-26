@@ -1,0 +1,392 @@
+/* CONTENIDO PRINCIPAL */
+
+.main-content {
+  width: 100%;
+  padding: 20px 24px;
+}
+
+.main-content h1 {
+  font-size: 24px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+
+/* HEADER */
+
+.header {
+  width: 100%;
+  min-height: 80px;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #ffffff;
+}
+
+/* LOGO */
+
+.logo {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo:hover {
+  transform: scale(1.06);
+}
+
+/* NAVIGATION */
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #111111;
+  padding: 12px 18px;
+  border-radius: 24px;
+  font-size: 15px;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.navigation a:not(.active):hover {
+  background-color: #f0f0f0;
+}
+
+.navigation .active {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+/* HEADER ACTIONS */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.header-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #767676;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.header-icon:hover {
+  background-color: #f0f0f0;
+  color: #111111;
+}
+
+.header-icon svg {
+  width: 23px;
+  height: 23px;
+}
+
+.header-actions .profile {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background-color: #eeeeee;
+  color: #111111;
+  font-size: 14px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* SEARCH BAR */
+
+.search-bar {
+  flex: 1;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  background-color: #efefef;
+  border-radius: 30px;
+  padding: 0 16px;
+}
+
+.search-bar button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.search-bar input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 15px;
+}
+
+
+/* GALERÍA MASONRY */
+
+.gallery {
+  columns: 5;
+  column-gap: 16px;
+  width: 100%;
+}
+
+
+/* TARJETAS */
+
+.image-card {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 24px;
+  break-inside: avoid;
+}
+
+.image-media {
+  position: relative;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.image-link {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+.image-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.image-link:hover img {
+  transform: scale(1.04);
+}
+
+/* BOTÓN VISITAR */
+
+.visit-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e60023;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.image-link:hover .visit-button {
+  opacity: 1;
+}
+
+/* LIKES */
+
+.image-likes {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 10px;
+  background-color: white;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.image-likes span:first-child {
+  color: #e60023;
+}
+
+/* AVATAR */
+
+.photographer-avatar {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 4px solid white;
+  overflow: hidden;
+  background-color: #eeeeee;
+  z-index: 2;
+}
+
+.photographer-avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* INFORMACIÓN DEL FOTÓGRAFO */
+
+.image-info {
+  text-align: center;
+  padding: 0 4px;
+}
+
+.photographer-name {
+  display: block;
+  color: #111111;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.photographer-name:hover {
+  text-decoration: underline;
+}
+
+.image-date {
+  font-size: 11px;
+  color: #555555;
+  margin-top: 6px;
+}
+
+/* ESTADOS */
+
+.loading,
+.error,
+.empty-gallery {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 16px;
+}
+
+.error {
+  color: #c00;
+}
+
+
+/* ATRIBUCIÓN UNSPLASH */
+
+.image-attribution {
+  margin-top: 5px;
+  font-size: 10px;
+  color: #767676;
+  line-height: 1.4;
+}
+
+.image-attribution a {
+  color: #555555;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.image-attribution a:hover {
+  color: #111111;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+  .gallery {
+    columns: 4;
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    columns: 3;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    padding: 16px 10px;
+  }
+
+  .gallery {
+    columns: 2;
+    column-gap: 10px;
+  }
+
+  .image-card {
+    margin-bottom: 12px;
+  }
+
+  .image-link {
+    border-radius: 12px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    min-height: 64px;
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .header-actions {
+    gap: 4px;
+  }
+
+  .header-actions .header-icon {
+    display: none;
+  }
+
+  .header-actions .profile {
+    width: 32px;
+    height: 32px;
+  }
+
+  .search-bar {
+    height: 42px;
+    padding: 0 12px;
+  }
+}
